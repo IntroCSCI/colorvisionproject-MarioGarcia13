@@ -2,8 +2,7 @@
 
 ## Description
 
-!!!Replace with a description of what your program does!!!
-
+This program asks the user for 2 or 3 colors and saves the 2 or 3 colors into the file they want to save it to. 
 ### v0.2 Updates
 
 *Coming soon*
@@ -15,7 +14,7 @@
 
 ## Developer
 
-!!!Replace with your name!!!
+Mario Garcia
 
 ## Example
 
@@ -29,7 +28,11 @@ g++ --std=c++11 *.cpp -o cvp
 Here is an example of the program running:
 
 ```
-!!!Replace with an example of the program running with user interaction!!!
+How many colors do you need? 2 or 3?
+2
+Where eould you like to save the file?
+colors.txt
+
 ```
 
 ## C++ Guide
@@ -40,20 +43,19 @@ Here is an example of the program running:
 
 ### Console Input and Output
 
-!!!Replace with a summary and examples of how input and output have been used effectively and appropriately!!!
+I used cout to give the user instructions and cin to make the decisions from the users input.
 
 ### Decisions
 
-!!!Replace with a summary and examples of how multiple decision constructs have been used effectively and appropriately!!!
+I used char to make a yes or no decision for when the user enters something that does not exist. 
 
 ### Iteration
 
-!!!Replace with a summary and examples of how iteration has been used effectively and appropriately!!!
+iteration was used in this project to make sure that the user gets their input in on purpose. 
 
 ### File Input and Output
 
-!!!Replace with a summary and examples of how input and/or output of files have been used effectively and appropriately!!!
-
+I used the input of the file pallete.css to get the colors generated. 
 ### Arrays/Vectors
 
 *Coming in version 0.2*
