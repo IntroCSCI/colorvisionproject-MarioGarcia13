@@ -1,41 +1,77 @@
 //Author: Mario Garcia
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <vector>
+
 using namespace std;
+string convertCSS (string &);
+void readColors (string);
 
 int main()
 {
-  string text ="";
-  string colorGen = "pallete.css";
-  string filename = "";
-  int colorNum = 0 ;
-  fstream reader;
-  char choice;
+  string filename;
+  int colorNum; //maybe change to string
 
-  cout << "How many colors do you need? 2 or 3? \n";
-  cin >> colorNum;
-  do{
-    cout << "Where would you like to save the file? \n";
-    cin >> filename;
-    reader.open(filename, ios::in | ios::out);
-     if(reader.is_open () ){
-         while(!reader.eof () ){
-           
-          
-        }
-      }
-      else{
-        cout << "that file does not exist. Try again? y/n \n";
-        cin >> choice;
-      }
-  }while(choice == 'y');
+  do
+  {
+    cout << "How many colors do you need? (2-5)\n";
+   cin >> colorNum;
+  }
+  while(colorNum != 2 && colorNum != 3 && colorNum != 4 && colorNum != 5);
 
-  cout << text;
+  cout << "What would you like to name this file?\n";
+  cin >> filename;
 
+  convertCSS(filename);
 
+  // Create a text file
+  ofstream MyWriteFile(filename);
+  
+  // Decide how many colors are to be saved
+  if(colorNum == 2)
+  {
+    MyWriteFile << "#D81B60\n #1E88E5";
+  }
 
+  else if (colorNum ==3)
+  {
+    MyWriteFile << "#D81B60\n #1E88E5\n #FFC107";
+  }
 
+  else if (colorNum ==4)
+  {
+    MyWriteFile << "#D81B60\n #1E88E5\n #FFC107\n #004D40";
+  }
 
+  else if (colorNum ==5)
+  {
+    MyWriteFile << "#D81B60\n #1E88E5\n #FFC107\n #004D40\n #73FFE4";
+  }
+ 
+  MyWriteFile.close();
 
-  return 0;
+  cout << "The colors (";
+
+  readColors(filename);
+
+  cout << ") have been saved to " << filename;
 }
+
+string convertCSS (string & newName)
+{
+  newName = newName + ".css";
+  return newName;
+}
+
+void readColors (string colors)
+{
+  string myText;
+  ifstream MyReadFile(colors);
+  while(getline(MyReadFile,myText))
+  {
+    cout << myText;
+  }
+  MyReadFile.close();
+}
+
