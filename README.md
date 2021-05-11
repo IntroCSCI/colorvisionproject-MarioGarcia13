@@ -9,7 +9,7 @@ This program asks the user how many colors they want from 2-5 and then asks for 
 
 ### v1.0 Updates
 
-*Coming soon*
+This program asks the user how many colors they want from 2-5 and then asks for what they want to name the file. The file is then changed to a .css file where the colors the user asked for are stored. 
 
 
 ## Developer
@@ -29,10 +29,10 @@ Here is an example of the program running:
 
 ```
 How many colors do you need? (2-5)
-5
+2
 What would you like to name this file?
-mycolors
-The colors (#D81B60 #1E88E5 #FFC107 #004D40 #73FFE4) have been saved to mycolors.css
+Test
+The 2 colors requested have been saved to Test.css
 
 ```
 
@@ -64,7 +64,7 @@ I used fstream to create text files and after the file is created, 2-5 colors ge
 
 ### Arrays/Vectors
 
-*Coming in version 0.2*
+I implemented an Array that stores the colors. The array is then called and gives the colors when the user gives the amount of colors they want. 
 
 ### Functions
 
@@ -76,4 +76,4 @@ The second funtion was used to read out the colors that were written into the .c
 
 ### Classes
 
-*Coming in version 1.0*
+I implemented the color class to help write the colors into a .css file. I did this by creating a function within the public class called string display();.

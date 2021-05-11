@@ -2,7 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
+#include "colorvision.h"
+
 
 using namespace std;
 string convertCSS (string &);
@@ -11,7 +12,14 @@ void readColors (string);
 int main()
 {
   string filename;
-  int colorNum; //maybe change to string
+  int colorNum;
+
+  Colors color1{"color1{ color:#D81B60;}\n"};
+  Colors color2{"color2{ color:#1E88E5;}\n"};
+  Colors color3{"color3{ color:#FFC107;}\n"};
+  Colors color4{"color4{ color:#004D40;}\n"};
+  Colors color5{"color5{ color:#73FFE4;}\n"};
+  
 
   do
   {
@@ -31,31 +39,27 @@ int main()
   // Decide how many colors are to be saved
   if(colorNum == 2)
   {
-    MyWriteFile << "#D81B60\n #1E88E5";
+    MyWriteFile << color1.display() << color2.display();
   }
 
   else if (colorNum ==3)
   {
-    MyWriteFile << "#D81B60\n #1E88E5\n #FFC107";
+    MyWriteFile << color1.display() << color2.display() << color3.display();
   }
 
   else if (colorNum ==4)
   {
-    MyWriteFile << "#D81B60\n #1E88E5\n #FFC107\n #004D40";
+    MyWriteFile << color1.display() << color2.display() << color3.display() << color4.display();
   }
 
   else if (colorNum ==5)
   {
-    MyWriteFile << "#D81B60\n #1E88E5\n #FFC107\n #004D40\n #73FFE4";
+    MyWriteFile << color1.display() << color2.display() << color3.display() << color4.display() << color5.display();
   }
  
   MyWriteFile.close();
 
-  cout << "The colors (";
-
-  readColors(filename);
-
-  cout << ") have been saved to " << filename;
+  cout << "The " << colorNum << " colors requested have been saved to " << filename;
 }
 
 string convertCSS (string & newName)
