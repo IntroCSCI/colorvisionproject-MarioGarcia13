@@ -43,8 +43,6 @@ The 2 colors requested have been saved to Test.css
 I have used a string called filename to obtain the file name that the user wants to to save the file as. 
 I also have used an Int variable called colorNum to obtain the amount of colors the user wants to be saved to their file, this number is then used to decide how many colors are going to be saved with if statements. 
 
-!!!Replace with a summary and examples of how multiple variables have been used with a variety of data types and why they have been used effectively and appropriately!!!
-
 ### Console Input and Output
 
 I used cout to give the user instructions. then cin to recieve the amount of colors the user wants and what they want to name the file. 
